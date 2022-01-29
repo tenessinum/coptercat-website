@@ -5,35 +5,89 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Coptercat</title>
+	<link rel="stylesheet" href="bootstrap.css" />
+	<link rel="stylesheet" href="win95.css" />
 	<link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light navbar-95 ">
+		<a class="navbar-brand" href="#">
+			<img src="img/bauman-logo.png"> Coptercat</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	</nav>
+
+	<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+		<img src="img/logo.svg" height="34px">
+		<h1 class="display-4">Coptercat</h1>
+		<p class="lead">Тут создают будущее</p>
+	</div>
+
 	<div class="container">
-		<div class="block-row">
-			<div class="block logo-block bauman-logo">
-				<img class="logo" alt="Логотип Бауманки с котиком!" src="img/bauman-logo.png" />
+		<div class="card mb-4">
+			<div class="card-header">
+				<h4 class="my-0 font-weight-normal">Кто мы?</h4>
 			</div>
-			<div class="block logo-block">
-				<img class="logo" alt="Логотип с котиком!" src="img/logo.svg" />
+			<div class="card-body">
+				<p><img src="img/help_book_cool-1.png"> Мы команда студентов лучшего технического ВУЗа России.
+					Разрабатываем крутой полетный контроллер в рамках хакатона Copterhack 2022.
+				</p>
+				<a href="https://coex.tech/copterhack2022" class="btn btn-primary">Copterhack 2022</a>
 			</div>
-			<div class="block header-title">
-				<div>Coptercat</div>
-			</div>
-		</div>
-		<div class="block text-block">
-			<h1>Кто мы и что мы делаем</h1>
-			<p>Студенты лучшего технического и делаем супер крутой полетный контроллер в рамках хакатона <a href="https://coex.tech/copterhack2022">CopterHack 2022</a></p>
-		</div>
-		<div class="block text-block">
-			<h1>Крутая схема</h1>
-			<img alt="Матвей жесть схему сделал" src="img/scheme.jpg"/>	
-		</div>
-		<div class="block text-block">
-			<h1>Кис-кис кис-кис</h1>
-			<p>Я котик ты котик а ещё мне лень что-то дальше писать а надо как-то добавить побольше контента на сайт</a></p>
 		</div>
 	</div>
+
+	<div class="container ">
+		<div class="card mb-4">
+			<div class="card-header">
+				<h4 class="my-0 font-weight-normal">Схема</h4>
+			</div>
+			<div class="card-body">
+				<img src="img/scheme.jpg" style="width: 100%">
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="card mb-4">
+			<div class="card-header">
+				<h4 class="my-0 font-weight-normal">Дорожная карта</h4>
+			</div>
+			<div class="card-body">
+				<div class="row text-center">
+					<div class="col">
+						<h5>Ноябрь 2021</h5>
+						<p>Проектирование платы, тестирование модулей беспроводной связи</p>
+					</div>
+					<div class="col">
+						<h5>Декабрь 2021</h5>
+						<p>Проектирование платы, тестирование сети на ESP32</p>
+					</div>
+					<div class="col">
+						<h5>Январь 2022</h5>
+						<p>Проектирование платы, сдача экзаменов</p>
+					</div>
+					<div class="col">
+						<h5>Февраль 2022</h5>
+						<p>Изготовление платы, смирение с академом</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="taskbar">
+		<div class="row" style="margin-right: 0px;">
+			<div class="col-8">
+				<a href="" class="btn start-button"><img src="img/directory_folder_options-5.png" class="icon-16">
+					GitHub</a>
+			</div>
+			<div class="col-4 time">By tenessinum & matveylapin</div>
+		</div>
+	</footer>
 </body>
 
 </html>
