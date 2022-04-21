@@ -1,7 +1,5 @@
 .DS_Store
 node_modules
-/dist
-/coptercat-website
 
 # local env files
 .env.local
