@@ -6,13 +6,14 @@
       <specs />
       <connectors />
       <firmware />
-      <opensource/>
+      <esp32 />
+      <opensource />
       <div class="viewer-container">
         <dviewer />
       </div>
     </div>
   </div>
-</template>
+</template> 
 
 <script>
 import { isMobileOnly } from "mobile-device-detect";
@@ -23,9 +24,19 @@ import specs from "./components/specs";
 import connectors from "./components/connectors";
 import firmware from "./components/firmware";
 import opensource from "./components/open-source";
+import esp32 from "./components/esp32";
 
 export default {
-  components: { navbar, dviewer, annotation, specs, connectors, firmware, opensource },
+  components: {
+    navbar,
+    dviewer,
+    annotation,
+    specs,
+    connectors,
+    firmware,
+    opensource,
+    esp32,
+  },
   data() {
     return {
       isMobile: isMobileOnly,

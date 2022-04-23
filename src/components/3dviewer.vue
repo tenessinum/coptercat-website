@@ -1,5 +1,7 @@
 <template>
-    <div class="bold" style="margin-bottom: 20px; padding: 10px">{{ $t("3d-view") }}</div>
+  <div class="bold" style="margin-bottom: 20px; padding: 10px">
+    {{ $t("3d-view") }}
+  </div>
   <div v-if="started" class="container-3d" id="canvas_container"></div>
   <div class="container-placeholder" v-else>
     <img @click="init3d" :src="require('@/assets/icons/play.svg')" alt="" />
@@ -51,11 +53,12 @@ export default {
         }).observe(document.getElementById("canvas_container"));
         renderer.setClearColor(0xbbbbbb, 1);
         let controls = new OrbitControls(camera, renderer.domElement);
-        camera.position.set(0, 0, 100);
+        camera.position.set(0, 0, -100);
         camera.lookAt(0, 0, 0);
         controls.update();
 
         const _fronts = [{ file: "faces/Front.svg", color: 0x666666 }];
+        const _backs = [{ file: "faces/Back.svg", color: 0x666666 }];
 
         function loadFronts(fronts, offset) {
           if (fronts.length === 0) return;
@@ -92,6 +95,41 @@ export default {
             loadFronts(fronts.slice(1), offset + 0.1);
           });
         }
+        function loadBacks(fronts, offset) {
+          if (fronts.length === 0) return;
+
+          let floader = new SVGLoader();
+          floader.load(fronts[0].file, function (data) {
+            let paths = data.paths;
+            let group = new THREE.Group();
+
+            for (let i = 0; i < paths.length; i++) {
+              let path = paths[i];
+              let material = new THREE.MeshPhysicalMaterial({
+                color: fronts[0].color,
+                side: THREE.DoubleSide,
+              });
+
+              let shapes = SVGLoader.createShapes(path);
+
+              for (let j = 0; j < shapes.length; j++) {
+                let shape = shapes[j];
+                let geometry = new THREE.ShapeGeometry(shape);
+                let mesh = new THREE.Mesh(geometry, material);
+                group.add(mesh);
+              }
+            }
+            group.scale.multiplyScalar(0.000001);
+            group.position.x -= 19.3;
+            group.position.y += 25.2;
+            group.position.z -= 0.1 + offset;
+            group.rotation.z = Math.PI;
+            group.rotation.y = Math.PI;
+
+            scene.add(group);
+            loadFronts(fronts.slice(1), offset + 0.1);
+          });
+        }
 
         let loader = new ThreeMFLoader().setPath("models/");
         loader.load("model.3mf", function (object) {
@@ -100,6 +138,7 @@ export default {
 
           scene.add(object);
           loadFronts(_fronts, 0);
+          loadBacks(_backs, 0);
         });
 
         document
@@ -150,7 +189,7 @@ export default {
 }
 
 .container-placeholder > img:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .container-placeholder > img {
