@@ -1,3 +1,102 @@
 {
-    
+    "show_3d": "PCB viewer",
+    "lang": "Language",
+    "project_description_title": "Description of the project",
+    "project_description": "Development of a modern board for the firmware PX4 FMUV6U, dimensions of 55x40mm and an additional WiFi module for the implementation of cool pieces, for example, a distributed network",
+    "idea_title": "The idea of the project",
+    "idea": "Flight on STM32H7 with a place for RPI CM4 and built -in ESP32 to create a distributed network",
+    "perspective_title": "Perspectives",
+    "perspective": "Use COPTERCAT as the main flight controller on the clover platform",
+    "specs": "Secyclation",
+    "fmu": "FMU",
+    "fmu-lines": {
+        "1": "STM32H753IK6 480MHz Cortex-M7",
+        "2": "2mb + 256kb flash",
+        "3": "1MB RAM",
+        "4": "ICM20602, ICM42605, BMI088, BMP388, BMM150",
+        "5": "Fully compatible with FMU-V6U standard"
+    },
+    "rpi": "RPI",
+    "rpi-lines": {
+        "1": "STM32H753IK6 480MHz Cortex-M7",
+        "2": "2mb + 256kb flash",
+        "3": "1MB RAM",
+        "4": "ICM20602, ICM42605, BMI088, BMP388, BMM150",
+        "5": "Fully compatible with FMU-V6U standard",
+        "6": "USB-OTG Support"
+    },
+    "esp": "ESP32",
+    "esp-lines": {
+        "1": "STM32H753IK6 480MHz Cortex-M7",
+        "2": "2mb + 256kb flash",
+        "3": "1MB RAM",
+        "4": "ICM20602, ICM42605, BMI088, BMP388, BMM150"
+    },
+    "misc": "Rest",
+    "misc-lines": {
+        "1": "STM32H753IK6 480MHz Cortex-M7",
+        "2": "2mb + 256kb flash",
+        "3": "1MB RAM",
+        "4": "ICM20602, ICM42605, BMI088, BMP388, BMM150",
+        "5": "Fully compatible with FMU-V6U standard",
+        "6": "USB-OTG Support",
+        "7": "Dimensions 40x55 mm, board 4 layers"
+    },
+    "connectors": "Connectors and jumpers",
+    "connectors-front": {
+        "1": "STM32H753IK6 480MHz Cortex-M7",
+        "2": "2mb + 256kb flash",
+        "3": "1MB RAM",
+        "4": "ICM20602, ICM42605, BMI088, BMP388, BMM150",
+        "5": "Fully compatible with FMU-V6U standard"
+    },
+    "connectors-bottom": {
+        "6": "USB-OTG Support",
+        "7": "Dimensions 40x55 mm, board 4 layers",
+        "8": "JST-6 standard PX4 power plume",
+        "9": "JST-6 GPS+compass+5V",
+        "10": "JST-4 I2C+5V",
+        "11": "USB Type-C",
+        "12": "JST-4 UART7 + 5V",
+        "13": "JST-4 I2C RPI + 3.3B to connect rangefinder",
+        "14": "JST-4 UART5 + 5V",
+        "15": "JST-5 Standard connector for connecting the control receiver",
+        "16": "SD SD card (for RPI)",
+        "17": "Jumper Boot for STM32",
+        "18": "RPIBoot Jumper RPI CM4 Module Emmc Firmware",
+        "19": "Jumper of switching the USB operating mode (with a closed jumper, USB operates as an input Hub and when connected to the computer will be displayed by STM32, ESP32 and RPI CM4 in OTG mode; with a jammed jumper, USB will work to connect external devices to RPI, for example stereo chambers)"
+    },
+    "rotate": "Turn over",
+    "firmware": "Loading firmware",
+    "fmu-firmware": {
+        "1": "STM32H753IK6 480MHz Cortex-M7",
+        "2": "2mb + 256kb flash",
+        "3": "1MB RAM",
+        "4": "ICM20602, ICM42605, BMI088, BMP388, BMM150",
+        "5": "Fully compatible with FMU-V6U standard",
+        "6": "USB-OTG Support",
+        "7": "Dimensions 40x55 mm, board 4 layers",
+        "8": "Front jumper 19.",
+        "9": "The device appears in the / Dev folder on RPI",
+        "10": "Detailed instructions here"
+    },
+    "esp-firmware": {
+        "1": "STM32H753IK6 480MHz Cortex-M7",
+        "2": "2mb + 256kb flash",
+        "3": "1MB RAM",
+        "4": "ICM20602, ICM42605, BMI088, BMP388, BMM150",
+        "5": "Fully compatible with FMU-V6U standard",
+        "6": "USB-OTG Support",
+        "7": "Dimensions 40x55 mm, board 4 layers",
+        "8": "Front jumper 19.",
+        "9": "Compile your code in .bin format",
+        "10": "Download the resulting file on RPI",
+        "11": "Load the firmware into the microcontroller using ESPTOOL"
+    },
+    "rpi-firmware": {
+        "1": "STM32H753IK6 480MHz Cortex-M7",
+        "2": "2mb + 256kb flash"
+    },
+    "3d-view": "And here you can look at the fee",
+    "open-source": "What about Open Source?"
 }
